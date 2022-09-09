@@ -1,0 +1,249 @@
+@charset "UTF-8";
+
+/* すべてのWebページに適用される */
+
+html {
+  font-family:sans-serif
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  margin: 0;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 8px;
+  border-bottom: 3px dotted #3f5170;
+}
+
+h3 {
+  margin: 0px 8px 8px 8px;
+} 
+
+p {
+  margin: 0px 8px 0px 8px;
+}
+
+p + p {
+  margin-top: 8px;
+}
+
+.container {
+  width: calc(100% - 32px);
+  margin: 0 auto;
+  outline: 2px solid red;
+}
+
+/* すべてのページに適用 - ヘッダー - */
+.nav li {
+  display: inline-block;
+  font-size: 18px;
+}
+
+.nav a {
+  text-decoration: none;
+}
+
+.nav li + li {
+  margin-left: 32px;
+}
+
+nav ul {
+  text-align: center;
+}
+
+.nav a:hover {
+  opacity: 0.8;
+}
+
+nav li a span {
+  line-height: 1;
+  font-size: 12px;
+  display: block;
+}
+
+/* すべてのページに適用 - フッター - */
+footer {
+  margin-top: 32px;
+  text-align: center;
+}
+
+/* ホーム - メイン - */
+main h2 {
+  margin: 8px;
+}
+
+.center {
+  text-align: center;
+}
+
+main h2 span {
+  line-height: 1;
+  font-size: 12px;
+  display: block;
+}
+
+/* information - メイン - */
+.information {
+  display: flex;
+}
+
+.shadow {
+  box-shadow: 3px 3px 5px #000;
+}
+
+.description {
+  margin-left: 16px;
+  align-self: center;
+  flex: 1;
+}
+
+.description h2 h3 {
+  margin-bottom: 32px;
+}
+
+.info {
+  border-collapse: collapse;
+  margin-left: 8px;
+}
+
+.info th, .info td {
+  padding: 8px;
+  border: 1px solid #bec2c7;
+}
+
+.info th {
+  background-color: #dde2ea;
+  width: 90px;
+}
+
+.info td {
+  background-color: #eeece9;
+}
+
+/* commodity - メイン - */
+.link img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+  vertical-align: bottom;
+}
+
+.link a:link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.link a:hover {
+  opacity: 0.8;
+}
+
+.link span {
+  background-color: #79420d;
+  display: block;
+  width: 550;
+  text-align: center;
+  border-radius: 0 0 10px 10px;
+  padding: 6px 0;
+}
+
+.syouhin {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.syouhin p {
+  width: 47%;
+  outline: 2px solid blue;
+  margin: 8px;
+}
+
+/* contact - メイン - */
+fieldset {
+  border: 1px solid #79420d;
+  border-radius: 10px;
+  padding: 20px 20px 10px;
+  margin-bottom: 30px;
+}
+
+fieldset div {
+  margin: 0px 8px 0px;
+}
+
+legend {
+  font-weight: bold;
+  font-size: 18px;
+  color: #79420d;
+}
+
+form p {
+  margin-bottom: 15px;
+}
+
+sup {
+  color: #900;
+  font-size: 10px;
+}
+
+.itemName {
+  font-weight: bold;
+}
+
+/* フォームの入力欄 */
+input,textarea,select {
+  font-family: inherit;
+  padding: 5px;
+  font-size: 14px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 7px #900;
+  border: 1px solid #600;
+}
+
+input[type="submit"] {
+  background-color: #79420d;
+  color: #fff;
+  padding: 15px 40px;
+  font-weight: bold;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+  background-color: #c29b28;
+}
+
+
+/* medium screen */
+@media (min-width:600px) {
+  body {
+    background: pink;
+  }
+}
+
+/* large screen */
+@media (min-width:800px) {
+  body {
+    background: skyblue;
+  }
+
+  .container {
+    width: calc(100% - 32px);
+    margin: 0 auto;
+    max-width: 800px;
+  }
+}
+
+
