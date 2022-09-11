@@ -7,6 +7,7 @@
   <title>くらしの百科おくも</title>
   <link rel="icon" href="img/favicon.png">
   <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <style>
   * {
     outline: 1px solid #ff0000;
@@ -14,50 +15,83 @@
   </style>
 </head>
 <body>
-<!-- ヘッダー -->
-<header>
+  <!-- ヘッダー -->
+  <header>
+    <div class="container">
+      <div class="head">
+        <div class="headline">
+          <h1>くらしの百科おくも</h1>
+        </div>
+        <div class="sp_menu">
+          <span class="material-icons" id="open_menu">menu</span>
+        </div>
+      </div>
+      <div class="overlay">
+        <span class="material-icons" id="close_menu">close</span>
+        <nav class="nav2">
+          <ul>
+            <li><a href="#">home</a></li>
+            <li><a href="#">information</a></li>
+            <li><a href="#">commodity</a></li>
+            <li><a href="#">access</a></li>
+            <li><a href="#">contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <nav class="nav1">
+        <ul>
+          <li><a href="index.html"><span>ホーム</span>home</a></li>
+          <li><a href="information.html"><span>店舗情報</span>information</a></li>
+          <li><a href="commodity.html"><span>商品</span>commodity</a></li>
+          <li><a href="access.html"><span>場所</span>access</a></li>
+          <li><a href="contact.html"><span>お問い合わせ</span>contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- ヘッダーここまで -->
+  <!-- メイン -->
+  <div class="center">
+    <img 
+      src="img/gaikann.JPG"
+      alt="くらしの百科おくもの外観"
+      class="center"
+      width="70%"
+      height="auto">
+  </div>    
   <div class="container">
-    <h1>くらしの百科おくも</h1>
-    <nav class="nav">
-      <ul>
-        <li><a href="index.html"><span>ホーム</span>home</a></li>
-        <li><a href="information.html"><span>店舗情報</span>information</a></li>
-        <li><a href="commodity.html"><span>商品</span>commodity</a></li>
-        <li><a href="access.html"><span>場所</span>access</a></li>
-        <li><a href="contact.html"><span>お問い合わせ</span>contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-<!-- ヘッダーここまで -->
-<!-- メイン -->
-<div class="center">
-  <img 
-    src="img/gaikann.JPG"
-    alt="くらしの百科おくもの外観"
-    class="center"
-    width="70%"
-    height="auto">
-</div>    
-<div class="container">
-  <main>
-  <h2><span>お知らせ</span>News</h2>
-  <p>4月7日～9日までの3日間、「大売出し」を実施します。<br>
-    お買い得商品はこちら！！
+    <main>
+      <h2><span>お知らせ</span>News</h2>
+      <p>4月7日～9日までの3日間、「大売出し」を実施します。<br>
+      お買い得商品はこちら！！
       </p>
       <p>4月1日～4月31日まで「ヤマザキ春のパンまつり」です。<br>
       今回の白いお皿はこちら！！
-    </p>
+      </p>
+      <div id="open">
+        詳細を見る
+      </div>
+      <div id="mask" class="hidden"></div>
+      <section id="modal" class="hidden">
+        <img src="" alt="直径23cmの丸皿の写真">
+        <p>今年は直径23cmの丸皿です。</p>
+        <div id="close">
+          閉じる
+        </div>
+      </section>
+
+
     </main>
-</div>
-<!-- メインここまで -->
-<!-- フッター -->
-<div class="container">
-  <footer>
-    <small>(c) okumohyakka.com</small>
-  </footer>
-</div>
-<!-- フッターここまで -->
+  </div>
+  <!-- メインここまで -->
+  <!-- フッター -->
+  <div class="container">
+    <footer>
+      <small>(c) okumohyakka.com</small>
+    </footer>
+  </div>
+  <!-- フッターここまで -->
+  <script src="js/main.js"></script>
 </body>
 </html>
 

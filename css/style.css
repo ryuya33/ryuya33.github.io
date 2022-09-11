@@ -3,16 +3,11 @@
 /* すべてのWebページに適用される */
 
 html {
-  font-family:sans-serif
+  font-family: Verdana, sans-serif
 }
 
 body {
   margin: 0;
-}
-
-h1 {
-  margin: 0;
-  text-align: center;
 }
 
 h2 {
@@ -39,24 +34,92 @@ p + p {
 }
 
 /* すべてのページに適用 - ヘッダー - */
-.nav li {
+.headline h1 {
+  margin: 0;
+  line-height: 56px;
+}
+
+.head {
+  display: flex;
+  padding: 0 16px;
+}
+
+.close_icon {
+  padding: 16px;
+}
+
+.sp_menu {
+  margin-left: auto;
+}
+
+.sp_menu #open_menu {
+  font-size: 32px;
+  line-height: 56px;
+  cursor: pointer;
+}
+
+.sp_menu #open_menu.hide {
+  display: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.95);
+  text-align: center;
+  padding: 64px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.overlay #close_menu {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.overlay ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.overlay li {
+  margin-top: 24px;
+}
+
+.nav2 li {
+  font-size: 18px;
+}
+
+.nav1 li {
   display: inline-block;
   font-size: 18px;
 }
 
-.nav a {
+.nav1 a {
   text-decoration: none;
 }
 
-.nav li + li {
+.nav1 li + li {
   margin-left: 32px;
 }
 
-nav ul {
+.nav1 ul {
   text-align: center;
 }
 
-.nav a:hover {
+.nav1 a:hover {
   opacity: 0.8;
 }
 
@@ -81,10 +144,59 @@ main h2 {
   text-align: center;
 }
 
+.center img {
+  vertical-align: bottom;
+}
+
 main h2 span {
   line-height: 1;
   font-size: 12px;
   display: block;
+}
+
+#open,#close {
+  cursor: pointer;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+  padding: 12px 0;
+  margin: 16px auto 0;
+}
+
+#mask {
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+#modal {
+  background: #fff;
+  width: 300px;
+  padding: 20px;
+  border-radius: 4px;
+  position: absolute;
+  top: 400px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transition: transform 0.4s;
+}
+
+#modal > p {
+  margin: 0 0 20px;
+  text-align: center;
+}
+
+#mask.hidden {
+  display: none;
+}
+
+#modal.hidden {
+  transform: translate(0, -600px);
 }
 
 /* information - メイン - */
@@ -162,6 +274,17 @@ main h2 span {
   outline: 2px solid blue;
   margin: 8px;
 }
+
+/* access - メイン - */
+
+.access {
+  text-align: center;
+}
+
+.access img {
+  vertical-align: bottom;
+}
+
 
 /* contact - メイン - */
 fieldset {
