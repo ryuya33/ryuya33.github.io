@@ -41,7 +41,6 @@ p + p {
 
 .head {
   display: flex;
-  padding: 0 16px;
 }
 
 .close_icon {
@@ -73,6 +72,7 @@ p + p {
   padding: 64px;
   opacity: 0;
   pointer-events: none;
+  transition: opacity .6s;
 }
 
 .overlay.show {
@@ -96,10 +96,42 @@ p + p {
 
 .overlay li {
   margin-top: 24px;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .3s, transform .3s;
+}
+
+.overlay.show li {
+  opacity: 1;
+  transform: none;
+}
+
+.overlay.show li:nth-child(1) {
+  transition-delay: .1s;
+}
+
+.overlay.show li:nth-child(2) {
+  transition-delay: .2s;
+}
+
+.overlay.show li:nth-child(3) {
+  transition-delay: .3s;
+}
+
+.overlay.show li:nth-child(4) {
+  transition-delay: .4s;
+}
+
+.overlay.show li:nth-child(5) {
+  transition-delay: .5s;
 }
 
 .nav2 li {
   font-size: 18px;
+}
+
+.nav1 {
+  display: none;  
 }
 
 .nav1 li {
@@ -237,6 +269,54 @@ main h2 span {
   background-color: #eeece9;
 }
 
+.message {
+  font-size: 18px;
+  border-bottom: 1px solid;
+  margin-bottom: 16px;
+  padding: 8px 16px; 
+}
+
+dl > div {
+  margin-bottom: 8px;
+}
+
+dt {
+  padding: 8px;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+}
+
+dt::before {
+  content: 'Q. ';
+}
+
+dt::after {
+  content: '+';
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+dl > div.appear dt::after {
+  transform: rotate(45deg);
+}
+
+dd {
+  padding: 8px;
+  margin: 0;
+  display: none;
+}
+
+dd::before {
+  content: 'A. ';
+}
+
+dl > div.appear dd {
+  display: block;
+}
+
+
 /* commodity - メイン - */
 .link img {
   width: 100%;
@@ -353,6 +433,14 @@ input[type="submit"]:hover {
 @media (min-width:600px) {
   body {
     background: pink;
+  }
+
+  .nav1 {
+    display: block;
+  }
+
+  .sp_menu {
+    display: none;
   }
 }
 

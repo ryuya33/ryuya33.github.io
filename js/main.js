@@ -27,16 +27,28 @@
   // ハンバーガーメニュー始め
   const open_menu = document.getElementById('open_menu');
   const overlay = document.querySelector('.overlay');
+  const close_menu = document.getElementById('close_menu');
 
   open_menu.addEventListener('click', () => {
     overlay.classList.add('show');
     open_menu.classList.add('hide');
   });
 
-
-  
- 
+  close_menu.addEventListener('click', () => {
+    overlay.classList.remove('show');
+    open_menu.classList.remove('hide');
+  });
   // ハンバーガーメニュー終わり
+
+// アコーディオンUI始め
+  const dts = document.querySelectorAll('dt');
+
+  dts.forEach(dt => {
+    dt.addEventListener('click', () => {
+      dt.parentNode.classList.toggle('appear');
+    });
+  });
+// アコーディオンUI終わり
 
 
 
