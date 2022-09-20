@@ -8,6 +8,7 @@
   <link rel="icon" href="img/favicon.png">
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
   <style>
   * {
     outline: 1px solid #ff0000;
@@ -20,7 +21,9 @@
     <div class="container">
       <div class="head">
         <div class="headline">
-          <h1>くらしの百科おくも</h1>
+          <a href="index.html">
+            <h1>くらしの百科おくも</h1>
+          </a>
         </div>
         <div class="sp_menu">
           <span class="material-icons" id="open_menu">menu</span>
@@ -51,16 +54,20 @@
   </header>
   <!-- ヘッダーここまで -->
   <!-- メイン -->
-  <div class="center">
+  <!-- <div class="center">
     <img 
       src="img/gaikann.JPG"
       alt="くらしの百科おくもの外観"
       class="center"
       width="70%"
       height="auto">
-  </div>    
-  <div class="container">
-    <main>
+  </div>     -->
+
+  <main>
+    <section class="hero">
+      <img src="img/gaikann.JPG" alt="くらしの百科おくもの外観">
+    </section>
+    <div class="container">
       <h2><span>お知らせ</span>News</h2>
       <p>4月7日～9日までの3日間、「大売出し」を実施します。<br>
       お買い得商品はこちら！！
@@ -79,17 +86,19 @@
           閉じる
         </div>
       </section>
-
-
-    </main>
-  </div>
+    </div>
+  </main>
   <!-- メインここまで -->
   <!-- フッター -->
-  <div class="container">
-    <footer>
+  <footer>
+    <div class="container">
       <small>(c) okumohyakka.com</small>
-    </footer>
-  </div>
+      <ul>
+        <li><a href="#"></a><i class="bi bi-twitter"></i></li>
+        <li><a href="#"></a><i class="bi bi-instagram"></i></li>
+      </ul>
+    </div>
+  </footer>
   <!-- フッターここまで -->
   <script src="js/main.js"></script>
 </body>

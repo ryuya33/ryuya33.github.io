@@ -39,6 +39,14 @@ p + p {
   line-height: 56px;
 }
 
+.headline a {
+  text-decoration: none;
+}
+
+.headline a:hover {
+  opacity: 0.8;
+}
+
 .head {
   display: flex;
 }
@@ -162,9 +170,10 @@ nav li a span {
 }
 
 /* すべてのページに適用 - フッター - */
-footer {
-  margin-top: 32px;
-  text-align: center;
+footer  ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 /* ホーム - メイン - */
@@ -172,12 +181,16 @@ main h2 {
   margin: 8px;
 }
 
-.center {
+/* .center {
   text-align: center;
-}
+} */
 
-.center img {
+/* .center img {
   vertical-align: bottom;
+} */
+
+.hero img {
+  width: 100%;
 }
 
 main h2 span {
@@ -186,7 +199,7 @@ main h2 span {
   display: block;
 }
 
-#open,#close {
+#open, #close {
   cursor: pointer;
   width: 200px;
   border: 1px solid #ccc;
@@ -296,6 +309,7 @@ dt::after {
   position: absolute;
   top: 8px;
   right: 16px;
+  transition: transform .3s;
 }
 
 dl > div.appear dt::after {
@@ -314,8 +328,19 @@ dd::before {
 
 dl > div.appear dd {
   display: block;
+  animation: .3s fadeIn;
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
 
 /* commodity - メイン - */
 .link img {
@@ -350,9 +375,9 @@ dl > div.appear dd {
 }
 
 .syouhin p {
-  width: 47%;
+  width: calc((100% - 16px) / 2);
   outline: 2px solid blue;
-  margin: 8px;
+  margin: 8px 0 8px;
 }
 
 /* access - メイン - */

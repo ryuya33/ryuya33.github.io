@@ -7,21 +7,27 @@
   const modal = document.getElementById('modal');
   const mask= document.getElementById('mask');
 
-  open.addEventListener('click', () => {
-    modal.classList.remove('hidden');
-    mask.classList.remove('hidden');
-  });
+  if(open) {
+    open.addEventListener('click', () => {
+      modal.classList.remove('hidden');
+      mask.classList.remove('hidden');
+    });
+  }
 
-  close.addEventListener('click', () => {
-    modal.classList.add('hidden');
-    mask.classList.add('hidden');
-  });
+  if(close) {
+    close.addEventListener('click', () => {
+      modal.classList.add('hidden');
+      mask.classList.add('hidden');
+    });
+  }
 
-  mask.addEventListener('click', () => {
-    // modal.classList.add('hidden');
-    // mask.classList.add('hidden');
-    close.click();
-  });
+  if(mask) {
+    mask.addEventListener('click', () => {
+      // modal.classList.add('hidden');
+      // mask.classList.add('hidden');
+      close.click();
+    });
+  }
   // モーダルウィンドウ終わり
 
   // ハンバーガーメニュー始め
@@ -46,6 +52,12 @@
   dts.forEach(dt => {
     dt.addEventListener('click', () => {
       dt.parentNode.classList.toggle('appear');
+
+      dts.forEach(el => {
+        if (dt !== el) {
+          el.parentNode.classList.remove('appear');
+        }
+      })
     });
   });
 // アコーディオンUI終わり
