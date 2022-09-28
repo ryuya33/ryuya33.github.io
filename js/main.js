@@ -34,15 +34,18 @@
   const open_menu = document.getElementById('open_menu');
   const overlay = document.querySelector('.overlay');
   const close_menu = document.getElementById('close_menu');
+  const hero = document.querySelector('.hero');
 
   open_menu.addEventListener('click', () => {
     overlay.classList.add('show');
     open_menu.classList.add('hide');
+    hero.classList.add('hide');
   });
 
   close_menu.addEventListener('click', () => {
     overlay.classList.remove('show');
     open_menu.classList.remove('hide');
+    hero.classList.remove('hide');
   });
   // ハンバーガーメニュー終わり
 
@@ -83,6 +86,18 @@
   });
  
 // タブメニュー終わり
+
+// カルーセル始め
+  const next = document.getElementById('next');
+  const ul = document.querySelector('.hero ul');
+  const slides = ul.children;
+
+
+  next.addEventListener('click', () => {
+    const slideWidth = slides[0].getBoundingClientRect().width;
+    ul.style.transform = `translateX(${-1 * slideWidth}px)`;
+  });
+// カルーセル終わり
 
 
 }
