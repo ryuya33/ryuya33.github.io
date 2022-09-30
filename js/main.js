@@ -89,13 +89,53 @@
 
 // カルーセル始め
   const next = document.getElementById('next');
+  const prev = document.getElementById('prev');
   const ul = document.querySelector('.hero ul');
   const slides = ul.children;
+  const dots = [];
+  let currentIndex = 0;
 
+
+  function updateButtons() {
+    prev.classList.remove('hidden_carousel')
+    next.classList.remove('hidden_carousel')
+
+    if (currentIndex === 0) {
+      prev.classList.add('hidden_carousel');
+    }
+    if (currentIndex === slides.length - 1) {
+      next.classList.add('hidden_carousel');
+    }
+  }
+
+  function moveSlides() {
+    const slideWidth = slides[0].getBoundingClientRect().width;
+    ul.style.transform = `translateX(${-1 * slideWidth * currentIndex}px)`;
+  }
+
+  function setupDots() {
+    for (let i = 0; i < slides.length; i++) {
+      const button = document.createElement('button');
+      dots.push(button);
+      document.querySelector('.nav3').appendChild(button);
+    }
+
+    dots[0].classList.add('current');
+  }
+ 
+  updateButtons();
+  setupDots();
 
   next.addEventListener('click', () => {
-    const slideWidth = slides[0].getBoundingClientRect().width;
-    ul.style.transform = `translateX(${-1 * slideWidth}px)`;
+    currentIndex++;
+    updateButtons();
+    moveSlides();
+  });
+
+  prev.addEventListener('click', () => {
+    currentIndex--;
+    updateButtons();
+    moveSlides();
   });
 // カルーセル終わり
 

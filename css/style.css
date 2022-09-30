@@ -218,6 +218,8 @@ main h2 {
 /* .center img {
   vertical-align: bottom;
 } */
+
+/* カルーセル始め */
 .hero {
   overflow: hidden;
   position: relative;
@@ -262,6 +264,34 @@ main h2 {
 #next {
   right: 0;
 }
+
+.hidden_carousel {
+  display: none;
+}
+
+.nav3 {
+  margin: 16px 0;
+  text-align: center;
+}
+
+.nav3 button + button {
+  margin-left: 8px;
+}
+
+.nav3 button {
+  border: none;
+  width: 16px;
+  height: 16px;
+  background: #ddd;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.nav3 .current {
+  background: #999;
+}
+
+/* カルーセル終わり */
 
 main h2 span {
   line-height: 1;
