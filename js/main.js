@@ -116,6 +116,12 @@
   function setupDots() {
     for (let i = 0; i < slides.length; i++) {
       const button = document.createElement('button');
+      button.addEventListener('click', () => {
+        currentIndex = i;
+        updateDots();
+        updateButtons();
+        moveSlides();
+      });
       dots.push(button);
       document.querySelector('.nav3').appendChild(button);
     }
@@ -123,21 +129,33 @@
     dots[0].classList.add('current');
   }
  
+  function updateDots() {
+    dots.forEach(dot => {
+      dot.classList.remove('current');
+    });
+    dots[currentIndex].classList.add('current');
+  }
+
   updateButtons();
   setupDots();
 
   next.addEventListener('click', () => {
     currentIndex++;
     updateButtons();
+    updateDots();
     moveSlides();
   });
 
   prev.addEventListener('click', () => {
     currentIndex--;
     updateButtons();
+    updateDots();
     moveSlides();
   });
-// カルーセル終わり
 
+  window.addEventListener('resize', () => {
+    moveSlides();
+  });  
+// カルーセル終わり
 
 }
