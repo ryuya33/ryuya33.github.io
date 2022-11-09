@@ -1,6 +1,13 @@
 'use strict';
 
 {
+  //logoの表示始め
+  $(window).on('load',function(){
+    $("#splash").delay(1500).fadeOut('slow');//ローディング画面を1.5秒（1500ms）待機してからフェードアウト
+    $("#splash_logo").delay(1200).fadeOut('slow');//ロゴを1.2秒（1200ms）待機してからフェードアウト
+  });
+  //logoの表示終わり
+
   // モーダルウィンドウ始め
   const open = document.getElementById('open');
   const close = document.getElementById('close');
@@ -157,5 +164,4 @@
     moveSlides();
   });  
 // カルーセル終わり
-
 }

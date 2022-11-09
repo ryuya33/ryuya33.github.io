@@ -206,6 +206,46 @@ footer li + li {
   margin-left: 8px;
 }
 
+/* Loading背景画面設定　*/
+#splash {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background:#fff;
+  text-align:center;
+}
+  
+/* Loading画像中央配置　*/
+#splash_logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Loading アイコンの大きさ設定　*/
+#splash_logo img {
+  width:260px;
+}
+
+/* fadeUpをするアイコンの動き */
+.fadeUp{
+animation-name: fadeUpAnime;
+animation-duration:0.5s;
+animation-fill-mode:forwards;
+}
+
+@keyframes fadeUpAnime{
+  from {
+  transform: translateY(100px);
+  }
+
+  to {
+  transform: translateY(0);
+  }
+}
+
 /* ホーム - メイン - */
 main h2 {
   margin: 8px;
