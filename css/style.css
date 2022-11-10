@@ -655,9 +655,9 @@ input[type="submit"]:hover {
 
 /* medium screen */
 @media (min-width:600px) {
-  body {
+  /* body {
     background: pink;
-  }
+  } */
 
   .nav1 {
     display: block;
@@ -670,9 +670,9 @@ input[type="submit"]:hover {
 
 /* large screen */
 @media (min-width:800px) {
-  body {
+  /* body {
     background: skyblue;
-  }
+  } */
 
   #modal.hidden {
     transform: translate(0, -1050px);
