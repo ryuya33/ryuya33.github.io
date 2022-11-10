@@ -246,6 +246,16 @@ animation-fill-mode:forwards;
   }
 }
 
+/* 初回のみローディング画面表示 */
+.loading.is-active {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loading-animation.is-active {
+  opacity: 1;
+  visibility: visible;
+}
 /* ホーム - メイン - */
 main h2 {
   margin: 8px;

@@ -8,6 +8,25 @@
   });
   //logoの表示終わり
 
+  // logoの表示初回のみ始め
+  $(function () {
+    var webStorage = function () {
+      if (sessionStorage.getItem('access')) {
+        $(".loading").addClass('is-active');
+      } else {
+        sessionStorage.setItem('access', 'true'); // sessionStorageにデータを保存
+        $(".loading-animation").addClass('is-active'); // loadingアニメーションを表示
+        setTimeout(function () {
+          // ローディングを数秒後に非表示にする
+          $(".loading").addClass('is-active');
+          $(".loading-animation").removeClass('is-active');
+        }, 3000); // ローディングを表示する時間
+      }
+    }
+    webStorage();
+  });
+  // logoの表示初回のみ終わり
+
   // モーダルウィンドウ始め
   const open = document.getElementById('open');
   const close = document.getElementById('close');
