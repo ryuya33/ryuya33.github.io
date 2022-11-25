@@ -19,6 +19,10 @@ h3 {
   margin: 0px 8px 8px 8px;
 } 
 
+h4 {
+  margin: 8px 8px 0px 8px;
+} 
+
 p {
   margin: 0px 8px 0px 8px;
 }
@@ -30,7 +34,7 @@ p + p {
 .container {
   width: calc(100% - 32px);
   margin: 0 auto;
-  outline: 2px solid red;
+  /* outline: 2px solid red; */
 }
 
 /* すべてのページに適用 - ヘッダー - */
@@ -568,7 +572,7 @@ dl > div.appear dd {
 
 .syouhin p {
   width: calc((100% - 16px) / 2);
-  outline: 2px solid blue;
+  /* outline: 2px solid blue; */
   margin: 8px 0 0;
 }
 
@@ -579,7 +583,7 @@ dl > div.appear dd {
 }
 
 .access img {
-  width: 60%;
+  width: 80%;
   vertical-align: bottom;
 }
 

@@ -9,11 +9,11 @@
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-  <style>
+  <!-- <style>
   * {
     outline: 1px solid #ff0000;
   }
-  </style>
+  </style> -->
 </head>
 <body>
 <!-- ヘッダー -->
@@ -64,25 +64,25 @@
     <h4>FAX</h4>
     <p><strong>079-558-0031</strong><br>(24時間受付)</p>
     <h4>メール</h4>
-    <p><strong>kurashinohyakkaokumo@gmail.com</strong><br>(3日以内にお返事します)</p>
+    <p><strong>kurashinohyakkaokumo@gmail.com</strong><br>(3日以内にお返事します)</p><br>
     <h3>ご注文・お問い合わせフォーム</h3>
-    <p>以下にご記入の上、「返信する」ボタンを押してください。<br><sup>*は必須項目です。</sup></p>
+    <p>以下にご記入の上、「返信する」ボタンを押してください。<br><sup>*は必須項目です。</sup></p><br>
     <form action="contact/form.php" method="post" id="contact">
       <fieldset>
         <legend>お客様情報</legend>
         <p>
           <label><span class="itemName"><sup>*</sup>お名前:</span> 
-            <input type="text" name="name" size="50" maxlength="50" required>
+            <input type="text" name="name" size="40" maxlength="40" required>
           </label>
         </p>
         <p>
           <label><span class="itemName"><sup>*</sup>住所:</span>
-            <input type="text" name="name" size="50" maxlength="50" required>
+            <input type="text" name="name" size="40" maxlength="40" required>
           </label>
         </p>
         <p>
           <label><span class="itemName"><sup>*</sup>メールアドレス:</span> 
-            <input type="email" name="email" size="50" maxlength="50" required>
+            <input type="email" name="email" size="40" maxlength="40" required>
           </label>
         </p>
         <p>
@@ -107,7 +107,7 @@
           <p>
             <label>商品1:
               <input type="text" name="syouhin1">
-            </label>
+            </label><br>
             <label>数量:
               <input type="number" name="suryo1" size="5" maxlength="5">
             </label>
@@ -115,7 +115,7 @@
           <p>
             <label>商品2:
               <input type="text" name="syouhin2">
-            </label>
+            </label><br>
             <label>数量:
               <input type="number" name="suryo2" size="5" maxlength="5">
             </label>
@@ -123,7 +123,7 @@
           <p>
             <label>商品3:
               <input type="text" name="syouhin3">
-            </label>
+            </label><br>
             <label>数量:
               <input type="number" name="suryo3" size="5" maxlength="5">
             </label>
