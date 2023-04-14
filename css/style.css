@@ -357,7 +357,7 @@ main h2 span {
 
 #open, #close {
   cursor: pointer;
-  width: 250px;
+  width: 300px;
   border: 1px solid #ccc;
   border-radius: 4px;
   text-align: center;
@@ -549,8 +549,6 @@ dl > div.appear dd {
 /* commodity - メイン - */
 
 article {
-  display: flex;
-  gap: 16px;
   align-items: center;
 }
 
@@ -558,8 +556,8 @@ article + article {
   margin-top: 32px;
 }
 
-article:nth-child(even) {
-  flex-direction: row-reverse;
+article img {
+  width: 100%;
 }
 
 /* access - メイン - */
@@ -656,6 +654,25 @@ input[type="submit"]:hover {
   .sp_menu {
     display: none;
   }
+  /* commodity - メイン - 始め*/
+  article {
+    display: flex;
+    gap: 16px;
+  }
+
+  article img {
+    width: 50%;
+  }
+
+  article:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .text {
+    flex: 1;
+  }
+/* commodity - メイン - 終わり*/
+
 }
 
 /* large screen */

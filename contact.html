@@ -77,6 +77,12 @@
           </label>
         </p>
         <p>
+          <label><span class="itemName"><sup>*</sup>性別:</span> 
+            <input type="radio" name="sex" value="man" required checked>男性
+            <input type="radio" name="sex" value="woman" required>女性
+          </label>
+        </p>
+        <p>
           <label><span class="itemName"><sup>*</sup>住所:</span>
             <input type="text" name="name" size="25" maxlength="40" required>
           </label>
@@ -93,16 +99,7 @@
         </p>
       </fieldset>
       <fieldset>
-        <legend>お問い合わせ内容</legend>
-        <p>
-          <span class="itemName"><sup>*</sup>お問い合わせ種別:</span>
-          <label>
-            <input type="radio" value="ご予約" name="genre" checked>ご注文
-          </label>
-          <label>
-            <input type="radio" value="お問い合わせ" name="genre">お問い合わせ
-          </label>
-        </p>
+        <legend>ご注文はこちら</legend>
         <div>
           <span class="itemName">ご注文商品:<br></span>
           <p>
@@ -130,6 +127,9 @@
             </label>
           </p>
         </div>
+      </fieldset>
+      <fieldset>
+        <legend>お問い合わせはこちら</legend>
         <p>
           <label><span class="itemName">お問い合わせ内容:<br></span>
             <textarea name="message" id="message" cols="88" rows="5" wrap="hard" placeholder="ご自由にお書きください"></textarea>
