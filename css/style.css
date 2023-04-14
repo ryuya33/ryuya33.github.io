@@ -353,9 +353,11 @@ main h2 span {
   display: block;
 }
 
+/* モーダルウインドウ始め */
+
 #open, #close {
   cursor: pointer;
-  width: 200px;
+  width: 250px;
   border: 1px solid #ccc;
   border-radius: 4px;
   text-align: center;
@@ -406,6 +408,10 @@ main h2 span {
   margin: 0 auto;
 }
 
+/* モーダルウインドウ終わり */
+
+/* タブメニュー始め */
+
 .menu {
   list-style: none;
   padding: 0;
@@ -444,6 +450,8 @@ main h2 span {
 .content {
   display: none;
 }
+
+/* タブメニュー終わり */
 
 /* information - メイン - */
 .hero2 {
@@ -539,41 +547,19 @@ dl > div.appear dd {
 }
 
 /* commodity - メイン - */
-.link img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px 10px 0 0;
-  vertical-align: bottom;
-}
 
-.link a:link {
-  color: #fff;
-  text-decoration: none;
-}
-
-.link a:hover {
-  opacity: 0.8;
-}
-
-.link span {
-  background-color: #79420d;
-  display: block;
-  width: 550;
-  text-align: center;
-  border-radius: 0 0 10px 10px;
-  padding: 6px 0;
-}
-
-.syouhin {
+article {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
 }
 
-.syouhin p {
-  width: calc((100% - 16px) / 2);
-  /* outline: 2px solid blue; */
-  margin: 8px 0 0;
+article + article {
+  margin-top: 32px;
+}
+
+article:nth-child(even) {
+  flex-direction: row-reverse;
 }
 
 /* access - メイン - */
