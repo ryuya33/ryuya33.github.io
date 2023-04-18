@@ -273,6 +273,23 @@ main h2 {
   vertical-align: bottom;
 } */
 
+.bargain > a {
+  display: block;
+  margin: 16px auto;
+  padding: 12px 0;
+  width: 300px;
+  background-color: #4c4948;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  color: #eee;
+}
+
+.bargain > a:hover,
+#open:hover {
+  font-weight: bold;
+}
+
 /* カルーセル始め */
 .hero {
   overflow: hidden;
@@ -358,11 +375,11 @@ main h2 span {
 #open, #close {
   cursor: pointer;
   width: 300px;
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
   border-radius: 4px;
   text-align: center;
   padding: 12px 0;
-  margin: 16px auto 0;
+  margin: 16px auto;
   background-color: #4c4948;
   color: #eee;
 }
